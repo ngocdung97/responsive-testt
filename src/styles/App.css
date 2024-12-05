@@ -28,6 +28,22 @@
   color: #61dafb;
 }
 
+.slick-dots li {
+  width: 10px !important;
+  height: 10px !important;
+  background-color: aqua;
+}
+
+.slick-dots li button {
+  background: "none" !important;
+}
+
+.slick-dots li.slick-active button {
+  width: 20px !important;
+  height: 20px !important;
+  background-color: aqua;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
