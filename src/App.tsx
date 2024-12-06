@@ -1,18 +1,15 @@
-import React from "react";
 import "./styles/App.css";
-import Header from "./pages/Header";
-import HotGame from "./pages/HotGame";
-import Category from "./pages/Category";
-import Footer from "./pages/Footer";
-import SwiperComponent from "./pages/Swiper";
+import Body from "./views/Body";
+import Footer from "./views/Footer";
+import Header from "./views/Header";
+import SwiperComponent from "./views/Swiper";
 
 function App() {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Header />
       <SwiperComponent />
-      <HotGame />
-      <Category />
+      <Body />
       <Footer />
     </div>
   );

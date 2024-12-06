@@ -7,24 +7,28 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className="absolute z-50 flex justify-center top-0 left-0 right-0 h-24 text-slate-900 py-4 
+      className="absolute z-50 flex justify-center top-0 left-0 right-0 h-24 text-slate-900
         lg:bg-gradient-to-t from-[#00000099] to-[#00000099]"
     >
-      <div className="container lg:mx-auto flex justify-between items-center">
-        <h1 className="text-2xl font-bold">
+      <div className="container elementor-position flex justify-between items-center">
+        <h1 className="text-2xl font-bold py-4">
           <img src="/images/logo.svg" alt="logo" className="h-8 md:h-12" />
         </h1>
 
         {/* Menu for Desktop */}
-        <nav className="hidden md:flex gap-x-11 font-normal space-x-4">
+        <nav className="hidden md:flex items-center h-full gap-x-11 font-normal space-x-4">
           {Menu.map((item, index) => (
             <a
               onClick={() => setActiveTab(item)}
               key={index}
               href={`#${item.toLowerCase()}`}
-              className="hover:underline"
+              className="hover:underline flex justify-center items-center"
               style={{
                 color: activeTab === item ? "#FFFFFF" : "#FFFFFF80",
+                height: "100%",
+                borderBottom:
+                  "2px solid " +
+                  (activeTab === item ? "#FFFFFF" : "transparent"),
               }}
             >
               {item}
