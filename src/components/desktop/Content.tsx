@@ -46,6 +46,7 @@ const Content: React.FC = () => {
         <div className="flex flex-col justify-start items-start mb-6">
           {TabData.map((tab, index) => (
             <div
+              key={index}
               className={`flex items-center gap-x-2 py-3 text-base md:text-base font-medium ${
                 activeTab === tab.id
                   ? "opacity-80 text-black"

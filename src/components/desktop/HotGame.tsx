@@ -1,48 +1,11 @@
 import React, { useState } from "react";
-
-const Games = [
-  {
-    id: 1,
-    name: "Mahjong Ways",
-    image: "/images/mahjong.png",
-    thumbnail: "/images/mahjong-thumbnail.png",
-    description:
-      "4TECH™ has just launched their very first Mahjong inspired slot machine game .................",
-  },
-  {
-    id: 2,
-    name: "Wild Bandito",
-    image: "/images/wild-bandito.png",
-    thumbnail: "/images/wild-bandito-thumbnail.png",
-    description:
-      "Águila which means ‘The Eagle’ is a three-person Mexican bandit team that is activ…",
-  },
-  {
-    id: 3,
-    name: "Tree Of Fortune",
-    image: "/images/tree.png",
-    thumbnail: "/images/tree-thumbnail.png",
-    description:
-      "4TECH™ has just launched their very first Mahjong inspired slot machine game .................",
-  },
-  {
-    id: 4,
-    name: "Wild Bandito 22222",
-    image: "/images/wild-bandito.png",
-    thumbnail: "/images/wild-bandito-thumbnail.png",
-    description:
-      "Águila which means ‘The Eagle’ is a three-person Mexican bandit team that is activ…",
-  },
-];
+import { games } from "../../data/data";
 
 const HotGame: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
-    debugger;
-    console.log(currentIndex);
-
-    if (currentIndex < Games.length - 2) {
+    if (currentIndex < games.length - 2) {
       setCurrentIndex(currentIndex + 1);
     }
   };
@@ -69,8 +32,8 @@ const HotGame: React.FC = () => {
           </button>
           <button
             onClick={handleNext}
-            className={`${currentIndex >= Games.length - 2 && "opacity-20"}`}
-            disabled={currentIndex >= Games.length - 2}
+            className={`${currentIndex >= games.length - 2 && "opacity-20"}`}
+            disabled={currentIndex >= games.length - 2}
           >
             <img src="/images/icon/arrow-right.svg" alt="arrow-right" />
           </button>
@@ -81,7 +44,7 @@ const HotGame: React.FC = () => {
       <div className="relative">
         {/* List of games */}
         <div className="flex gap-x-4">
-          {Games.slice(currentIndex, currentIndex + 2).map((game) => (
+          {games.slice(currentIndex, currentIndex + 2).map((game) => (
             <div
               key={game.id}
               className="hover:scale-105 transition duration-300 ease-in-out md:w-[45%] lg:w-[490px] overflow-hidden"

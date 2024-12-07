@@ -1,11 +1,7 @@
 import React from "react";
+import { categories } from "../data/data";
 
 const Category: React.FC = () => {
-  const categories = [
-    { id: 1, name: "Music", color: "bg-blue-500" },
-    { id: 2, name: "Table Games", color: "bg-green-500" },
-  ];
-
   return (
     <section className="container mx-auto py-8">
       <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4">

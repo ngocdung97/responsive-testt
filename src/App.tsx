@@ -1,3 +1,4 @@
+import "@fontsource/montserrat";
 import "./styles/App.css";
 import Body from "./views/Body";
 import Footer from "./views/Footer";
